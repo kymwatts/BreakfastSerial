@@ -18,17 +18,15 @@ standard firmata.
 
 ## Installation
 
-Using PyPi
-
-``` bash
-pip install BreakfastSerial
-```
 
 #### From Source
 
 ``` bash
-git clone git://github.com/theycallmeswift/BreakfastSerial.git && cd BreakfastSerial
+git clone git://github.com/kymwatts/BreakfastSerial.git && cd BreakfastSerial
+python setup.py install
 
+#grab theycallmeswift's pyfimata, for fixed bluetooth connection.
+git clone git://github.com/theycallmeswift/pyFirmata.git && cd pyFirmata
 python setup.py install
 ```
 
