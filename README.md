@@ -1,6 +1,7 @@
-# BreakfastSerial
+# BreakfastSerial - Bluetooth serial WIP
 
 A Firmata based framework for interacting with Arduinos over serial.
+This fork is specific to getting bluetooth serial working.
 
 ## Hardware Setup
 
