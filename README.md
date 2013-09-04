@@ -2,6 +2,13 @@
 
 A Firmata based framework for interacting with Arduinos over serial.
 
+## Hardware Setup
+
+Not all Bluetooth serial devices are equal, you will most likely need to update the firmware on the device.
+A good tutorial for that lives [HERE](http://www.instructables.com/id/Modify-The-HC-05-Bluetooth-Module-Defaults-Using-A/)
+
+You will also want to use this to change the default from 9600 to 115200.
+
 ## Arduino Setup
 
 In order to use BreakfastSerial, you need to have an arduino running the
