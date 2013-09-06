@@ -50,6 +50,8 @@ To open the serial connection:
 ``` bash 
  sudo bluez-test-serial 20:13:06:04:27:06 &
 ```
+Need to modify this in the future, as it currently opens the port of only 1000 seconds.
+
 This will print out something like:
 ``` bash
 > Connected /dev/rfcomm1 to 20:13:06:04:27:06
