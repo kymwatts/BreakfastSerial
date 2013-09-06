@@ -10,6 +10,60 @@ A good tutorial for that lives [HERE](http://www.instructables.com/id/Modify-The
 
 You will also want to use this to change the default from 9600 to 115200.
 
+### Running on linux / raspberrypi
+
+Install the modules needed:
+``` bash 
+ sudo apt-get install bluetooth bluez-utils blueman 
+```
+
+Pair with the device
+
+Find bluetooth local device
+``` bash 
+ hcitool dev
+ >Devices:
+ >hci0	00:1A:7D:DA:71:0B
+```
+
+
+Find devices:
+``` bash 
+ hcitool scan
+ > Scanning ...
+ > 20:13:06:04:27:06	itead 
+```
+
+
+Pair the device:
+``` bash 
+ sudo bluez-simple-agent hci0 20:13:06:04:27:06
+```
+
+Make the device trusted
+``` bash 
+ bluez-test-device trusted 20:13:06:04:27:06 yes
+```
+
+
+To open the serial connection:
+``` bash 
+ sudo bluez-test-serial 20:13:06:04:27:06 &
+```
+This will print out something like:
+``` bash
+> Connected /dev/rfcomm1 to 20:13:06:04:27:06
+> Press CTRL-C to disconnect
+```
+ "/dev/rfcomm1" is the port we will use to connect to the arduino.
+ This process need to be running in the back ground, in order for breakfast serial to connect to the port.
+
+
+Need this for using the bluetooth module
+``` bash
+sudo apt-get python-bluez
+```
+
 ## Arduino Setup
 
 In order to use BreakfastSerial, you need to have an arduino running the
